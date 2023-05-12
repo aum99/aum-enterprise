@@ -35,7 +35,7 @@ const Navigation = () => {
       <NavbarContainer>
         <NavLogo onClick={navigateToHome} />
         <NavLinksContainer>
-          <NavLink to="/categories">Categories</NavLink>
+          <NavLink to="/products">Products</NavLink>
           <NavLink>Deals</NavLink>
           <NavLink>Whats New</NavLink>
           <NavLink>Delivery</NavLink>
@@ -54,8 +54,8 @@ const Navigation = () => {
         {isMenu && (
           <NavMenuContainer>
             <NavMenuBlock>
-              <NavLink to="/categories" onClick={toggleMenu}>
-                Categories
+              <NavLink to="/products" onClick={toggleMenu}>
+                Products
               </NavLink>
               <NavLink>Deals</NavLink>
               <NavLink>Whats New</NavLink>
