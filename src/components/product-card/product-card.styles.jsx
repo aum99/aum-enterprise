@@ -3,12 +3,14 @@ import { styled } from "styled-components";
 export const ProductCardContainer = styled.div`
   width: 280px;
   height: 350px;
-  margin: 10px 0;
-  /* border: 2px solid; */
+  /* margin: 10px 0; */
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 5px;
-  /* border-radius: 20px; */
   img {
-    width: 100%;
+    width: 270px;
     height: 60%;
     object-fit: cover;
     margin-bottom: 5px;
@@ -29,18 +31,12 @@ export const Name = styled.span`
 export const Price = styled.span`
   font-size: large;
   font-weight: 600;
+  margin-right: 10px;
 `;
 
 export const ProductDescription = styled.span`
   font-size: medium;
   display: flex;
-  margin: 10px 0;
-`;
-
-export const ProductRating = styled.span`
-  font-size: medium;
-  display: flex;
-  font-weight: 300;
   margin: 10px 0;
 `;
 
@@ -51,6 +47,7 @@ export const AddButton = styled.button`
   color: #ffffff;
   padding: 15px 25px;
   border-radius: 25px;
+  justify-content: center;
   cursor: pointer;
   border: none;
   &:hover {

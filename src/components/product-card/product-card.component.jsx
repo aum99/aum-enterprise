@@ -18,7 +18,6 @@ const ProductCard = ({ product }) => {
         <Price>{price}</Price>
       </ProductInfo>
       <ProductDescription>Lorem ipsum desc for prod</ProductDescription>
-      <ProductRating>⭐️⭐️⭐️⭐️ (120)</ProductRating>
       <AddButton>Add to Cart</AddButton>
     </ProductCardContainer>
   );
