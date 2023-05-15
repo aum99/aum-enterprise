@@ -9,7 +9,7 @@ export const CategoryButtonsContainer = styled.div`
 `;
 
 export const CategoryButton = styled(Link)`
-  padding: 10px;
+  padding: 0.5em;
   color: #000000;
   border: 2px solid black;
   margin: 10px;

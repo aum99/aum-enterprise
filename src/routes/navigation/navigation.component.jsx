@@ -51,22 +51,24 @@ const Navigation = () => {
             <i className="bx bx-menu"></i>
           </NavMenu>
         </NavbarCtaContainer>
-        {isMenu && (
-          <NavMenuContainer>
-            <NavMenuBlock>
-              <NavLink to="/products" onClick={toggleMenu}>
-                Products
-              </NavLink>
-              <NavLink>Deals</NavLink>
-              <NavLink>Whats New</NavLink>
-              <NavLink>Delivery</NavLink>
-            </NavMenuBlock>
-          </NavMenuContainer>
-        )}
       </NavbarContainer>
-      <BodyContainer>
-        <Outlet />
-      </BodyContainer>
+
+      {isMenu ? (
+        <NavMenuContainer>
+          <NavMenuBlock>
+            <NavLink to="/products" onClick={toggleMenu}>
+              Products
+            </NavLink>
+            <NavLink>Deals</NavLink>
+            <NavLink>Whats New</NavLink>
+            <NavLink>Delivery</NavLink>
+          </NavMenuBlock>
+        </NavMenuContainer>
+      ) : (
+        <BodyContainer>
+          <Outlet />
+        </BodyContainer>
+      )}
     </Fragment>
   );
 };

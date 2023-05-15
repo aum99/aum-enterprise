@@ -35,10 +35,6 @@ export const NavMenuContainer = styled.div`
   display: none;
   @media (max-width: 940px) {
     display: flex;
-    position: absolute;
-    top: 10%;
-    width: 100%;
-    height: 29vh;
     background-color: #e5e5e5;
     flex-direction: column;
     align-items: center;
