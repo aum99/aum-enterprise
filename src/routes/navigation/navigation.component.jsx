@@ -4,6 +4,10 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { toggleNavbar } from "../../store/navbar/navbar.action";
 import { selectIsMenuOpen } from "../../store/navbar/navbar.selector";
+import { setIsCartOpen } from "../../store/cart/cart.action";
+import { selectIsCartOpen } from "../../store/cart/cart.selector";
+
+import CartDropdown from "../../components/cart-dropdown/cart.component";
 
 import {
   NavbarContainer,
@@ -20,9 +24,14 @@ import {
 const Navigation = () => {
   const dispatch = useDispatch();
   const isMenu = useSelector(selectIsMenuOpen);
+  const isCartOpen = useSelector(selectIsCartOpen);
 
   const toggleMenu = () => {
     dispatch(toggleNavbar(!isMenu));
+  };
+
+  const toggleCart = () => {
+    dispatch(setIsCartOpen(!isCartOpen));
   };
 
   const navigate = useNavigate();
@@ -44,7 +53,7 @@ const Navigation = () => {
           <NavLink>
             <i className="bx bx-user icon"></i>Register
           </NavLink>
-          <NavLink>
+          <NavLink onClick={toggleCart}>
             <i className="bx bx-cart-alt icon"></i>Cart
           </NavLink>
           <NavMenu onClick={toggleMenu}>
@@ -69,6 +78,7 @@ const Navigation = () => {
           <Outlet />
         </BodyContainer>
       )}
+      {isCartOpen && <CartDropdown />}
     </Fragment>
   );
 };
