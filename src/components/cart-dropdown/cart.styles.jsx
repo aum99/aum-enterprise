@@ -3,18 +3,23 @@ import { Link } from "react-router-dom";
 
 export const CartDropdownContainer = styled.div`
   position: absolute;
-  background-color: #ffffff;
-  top: 12%;
-  right: 8%;
-  height: 48%;
-  width: 18%;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: space-between;
   border: 1px solid black;
+  background-color: white;
+  top: 90px;
+  right: 90px;
+  z-index: 5;
 `;
 
 export const ProductsContainer = styled.div`
-  margin: 15px 20px;
+  margin: 5px;
   height: 75%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   overflow: scroll;
 `;
 
