@@ -50,7 +50,7 @@ const Navigation = () => {
           <NavLink>Delivery</NavLink>
         </NavLinksContainer>
         <NavbarCtaContainer>
-          <NavLink>
+          <NavLink to="/auth">
             <i className="bx bx-user icon"></i>Register
           </NavLink>
           <NavLink onClick={toggleCart}>
