@@ -51,7 +51,7 @@ const Navigation = () => {
         </NavLinksContainer>
         <NavbarCtaContainer>
           <NavLink to="/auth">
-            <i className="bx bx-user icon"></i>Register
+            <i className="bx bx-user icon"></i>Sign In
           </NavLink>
           <NavLink onClick={toggleCart}>
             <i className="bx bx-cart-alt icon"></i>Cart

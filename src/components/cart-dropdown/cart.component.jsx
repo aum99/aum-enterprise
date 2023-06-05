@@ -6,6 +6,8 @@ import {
 } from "../../store/cart/cart.selector";
 import { setIsCartOpen } from "../../store/cart/cart.action";
 
+import DropdownItem from "../dropdown-item/dropdown-item.component";
+
 import {
   CartDropdownContainer,
   ProductsContainer,
@@ -24,7 +26,9 @@ const CartDropdown = () => {
     <CartDropdownContainer>
       <ProductsContainer>
         {cartItems.length ? (
-          cartItems.map((cartItem) => <p key={cartItem.id}>{cartItem.name}</p>)
+          cartItems.map((cartItem) => (
+            <DropdownItem item={cartItem}></DropdownItem>
+          ))
         ) : (
           <h1>Nothing in cart yet</h1>
         )}
