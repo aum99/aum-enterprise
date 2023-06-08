@@ -6,6 +6,8 @@ import { toggleNavbar } from "../../store/navbar/navbar.action";
 import { selectIsMenuOpen } from "../../store/navbar/navbar.selector";
 import { setIsCartOpen } from "../../store/cart/cart.action";
 import { selectIsCartOpen } from "../../store/cart/cart.selector";
+import { selectCurrentUser } from "../../store/user/user.selector";
+import { signOutStart } from "../../store/user/user.action";
 
 import CartDropdown from "../../components/cart-dropdown/cart.component";
 
@@ -25,6 +27,7 @@ const Navigation = () => {
   const dispatch = useDispatch();
   const isMenu = useSelector(selectIsMenuOpen);
   const isCartOpen = useSelector(selectIsCartOpen);
+  const currUser = useSelector(selectCurrentUser);
 
   const toggleMenu = () => {
     dispatch(toggleNavbar(!isMenu));
@@ -39,6 +42,10 @@ const Navigation = () => {
     navigate("/");
   });
 
+  const signOut = () => {
+    dispatch(signOutStart());
+  };
+
   return (
     <Fragment>
       <NavbarContainer>
@@ -50,9 +57,16 @@ const Navigation = () => {
           <NavLink>Delivery</NavLink>
         </NavLinksContainer>
         <NavbarCtaContainer>
-          <NavLink to="/auth">
-            <i className="bx bx-user icon"></i>Sign In
-          </NavLink>
+          {currUser ? (
+            <NavLink onClick={signOut}>
+              <i className="bx bx-log-out-circle"></i>Sign Out
+            </NavLink>
+          ) : (
+            <NavLink to="/sign-in">
+              <i className="bx bx-user icon"></i>Sign In
+            </NavLink>
+          )}
+
           <NavLink onClick={toggleCart}>
             <i className="bx bx-cart-alt icon"></i>Cart
           </NavLink>

@@ -1,13 +1,28 @@
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
+
+export const Container = styled.div`
+  display: flex;
+  padding: 5%;
+  margin: 0 20%;
+  justify-content: center;
+  align-items: center;
+  box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px,
+    rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px,
+    rgb(255, 217, 19) 20px -20px;
+  margin-top: 50px;
+  @media (max-width: 950px) {
+    margin: 0 10%;
+    margin-top: 50px;
+  }
+`;
 
 export const SignInContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 10px;
-  width: 35%;
+  width: 50%;
   box-sizing: border-box;
-  border-top: 10px solid red;
   @media (max-width: 650px) {
     width: 80%;
   }
@@ -23,9 +38,8 @@ export const InputBox = styled.input`
 `;
 
 export const Header = styled.p`
-  margin: 20px;
-  margin-bottom: 0;
-  font-size: x-large;
+  margin: 0;
+  font-size: xx-large;
   text-align: center;
   font-weight: 800;
 `;
@@ -88,4 +102,14 @@ export const SignInGoogleButton = styled.button`
   :focus {
     opacity: 0.75;
   }
+`;
+
+export const AlternateSpan = styled.p`
+  margin: 25px;
+  text-align: center;
+  font-size: small;
+`;
+
+export const SignUp = styled(Link)`
+  color: blue;
 `;
