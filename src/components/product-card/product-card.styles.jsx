@@ -9,12 +9,21 @@ export const ProductCardContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 5px;
+  /* box-sizing: border-box; */
   img {
     width: 270px;
     height: 60%;
     object-fit: cover;
     margin-bottom: 5px;
     border-radius: 10px;
+  }
+  @media (max-width: 655px) {
+    width: 160px;
+    height: 230px;
+    margin: 10px 0;
+    img {
+      width: 150px;
+    }
   }
 `;
 
@@ -26,18 +35,27 @@ export const ProductInfo = styled.div`
 export const Name = styled.span`
   font-size: large;
   font-weight: 600;
+  @media (max-width: 655px) {
+    font-size: small;
+  }
 `;
 
 export const Price = styled.span`
   font-size: large;
   font-weight: 600;
   margin-right: 10px;
+  @media (max-width: 655px) {
+    font-size: small;
+  }
 `;
 
 export const ProductDescription = styled.span`
   font-size: medium;
   display: flex;
   margin: 10px 0;
+  @media (max-width: 655px) {
+    font-size: x-small;
+  }
 `;
 
 export const AddButton = styled.button`

@@ -26,6 +26,15 @@ const Checkout = () => {
   console.log(cartItems);
   return (
     <CheckoutContainer>
+      <OrderSummaryContainer>
+        <Header>Order Summary</Header>
+        <ItemsContainer>
+          {cartItems.map((cartItem) => (
+            <CartItem key={cartItem.id} item={cartItem}></CartItem>
+          ))}
+        </ItemsContainer>
+        <CartTotal>Rs. {total}</CartTotal>
+      </OrderSummaryContainer>
       <DeliveryInfoContainer>
         <Header>Delivery Information</Header>
         <InfoInput
@@ -87,15 +96,6 @@ const Checkout = () => {
           ></SubAddressInput>
         </SubAddressContainer>
       </DeliveryInfoContainer>
-      <OrderSummaryContainer>
-        <Header>Order Summary</Header>
-        <ItemsContainer>
-          {cartItems.map((cartItem) => (
-            <CartItem key={cartItem.id} item={cartItem}></CartItem>
-          ))}
-        </ItemsContainer>
-        <CartTotal>Rs. {total}</CartTotal>
-      </OrderSummaryContainer>
     </CheckoutContainer>
   );
 };

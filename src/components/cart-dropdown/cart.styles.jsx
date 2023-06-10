@@ -19,6 +19,10 @@ export const CartDropdownContainer = styled.div`
 export const ProductsContainer = styled.div`
   margin: 5px;
   height: 75%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
   /* border: 1px solid black; */
   overflow: scroll;
 `;

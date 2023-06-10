@@ -5,11 +5,7 @@ import { selectCategoriesMap } from "../../store/categories/categories.selector"
 import ProductCard from "../../components/product-card/product-card.component";
 import CategoryButtons from "../../components/category-buttons/category-buttons.component";
 
-import {
-  CategoryButton,
-  CategoryButtonsContainer,
-  ProductsContainer,
-} from "./all-products.styles";
+import { ProductsContainer } from "./all-products.styles";
 import { Fragment } from "react";
 
 const AllProducts = () => {

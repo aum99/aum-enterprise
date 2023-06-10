@@ -22,7 +22,8 @@ export const DeliveryInfoContainer = styled.div`
 
 export const OrderSummaryContainer = styled.div`
   width: 40%;
-  height: 80vh;
+  max-height: 80vh;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   @media (max-width: 750px) {
